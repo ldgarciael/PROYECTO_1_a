@@ -1,0 +1,15 @@
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\bin\Debug\net9.0\Codigo_Proyecto.exe
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\bin\Debug\net9.0\Codigo_Proyecto.deps.json
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\bin\Debug\net9.0\Codigo_Proyecto.runtimeconfig.json
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\bin\Debug\net9.0\Codigo_Proyecto.dll
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\bin\Debug\net9.0\Codigo_Proyecto.pdb
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\Codigo_Proyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\Codigo_Proyecto.AssemblyInfoInputs.cache
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\Codigo_Proyecto.AssemblyInfo.cs
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\Codigo_Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\Codigo_Proyecto.sourcelink.json
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\Codigo_Proyecto.dll
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\refint\Codigo_Proyecto.dll
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\Codigo_Proyecto.pdb
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\Codigo_Proyecto.genruntimeconfig.cache
+C:\Users\chris\OneDrive - Universidad Rafael Landivar\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\PROYECTO_1_a\PROYECTO_1_a\Codigo_Proyecto\obj\Debug\net9.0\ref\Codigo_Proyecto.dll
