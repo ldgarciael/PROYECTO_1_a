@@ -16,6 +16,7 @@ class proyecto1A
         EleccionDePersonaje();
         EleccionDeMapa();
         MenuPrincipal();
+        PatoPelea();
     }
     static void EleccionDePersonaje()
     {
@@ -46,7 +47,7 @@ class proyecto1A
                     patoVida = 100;
                     patoAtaque = 20;
                     Console.WriteLine("╔════════════════════════════════════════════════════╗");
-                    Console.WriteLine($"      {patoNombre} ha elegido al pato caballero         ");
+                    Console.WriteLine($"      {patoNombre} ha elegido al pato caballero 🛡        ");
                     Console.WriteLine("╠════════════════════════════════════════════════════╣");
                     Console.WriteLine("║  ¡Prepárate para la aventura, valiente pato!       ║");
                     Console.WriteLine("╚════════════════════════════════════════════════════╝");
@@ -60,7 +61,7 @@ class proyecto1A
                     patoVida = 70;
                     patoAtaque = 30;
                     Console.WriteLine("╔════════════════════════════════════════════════════╗");
-                    Console.WriteLine($"      {patoNombre} ha elegido al pato caballero         ");
+                    Console.WriteLine($"      {patoNombre} ha elegido al pato mago 🔥         ");
                     Console.WriteLine("╠════════════════════════════════════════════════════╣");
                     Console.WriteLine("║  ¡Prepárate para la aventura, valiente pato!       ║");
                     Console.WriteLine("╚════════════════════════════════════════════════════╝");
@@ -74,7 +75,7 @@ class proyecto1A
                     patoVida = 85;
                     patoAtaque = 25;
                     Console.WriteLine("╔════════════════════════════════════════════════════╗");
-                    Console.WriteLine($"      {patoNombre} ha elegido al pato caballero         ");
+                    Console.WriteLine($"      {patoNombre} ha elegido al pato arquero 🏹        ");
                     Console.WriteLine("╠════════════════════════════════════════════════════╣");
                     Console.WriteLine("║  ¡Prepárate para la aventura, valiente pato!       ║");
                     Console.WriteLine("╚════════════════════════════════════════════════════╝");
@@ -138,6 +139,7 @@ class proyecto1A
                     patoAvanzar = true;
                     Console.WriteLine("Parece ser que el camino que elegiste no existe en este mundo, vuelve a intentar");
                     Console.WriteLine("Pulsa cualquier tecla para continuar");
+                    Console.ReadKey();
                     Console.Clear();
                     break;
             }
@@ -150,7 +152,7 @@ class proyecto1A
         Console.WriteLine("╠════════════════════════════════════════╣");
         Console.WriteLine($"  📍 Ubicación: {patoMapaNombre}        ");
         Console.WriteLine("╠════════════════════════════════════════╣");
-        Console.WriteLine($"║ ❤️  Vida Actual: {patoVida}                     ║");
+        Console.WriteLine($"║ ❤️  Vida Actual: {patoVida}                    ║");
         Console.WriteLine($"║ ⚔️  Poder Actual: {patoAtaque}                    ║");
         Console.WriteLine($"║ 🏆 Enemigos Derrotados: {patoEnemigosDerrotados}              ║");
         Console.WriteLine("╠════════════════════════════════════════╣");
@@ -158,7 +160,7 @@ class proyecto1A
         Console.WriteLine("║ (1) Continuar     |     (2) Rendirse   ║");
         Console.WriteLine("╚════════════════════════════════════════╝");
         int.TryParse(Console.ReadLine(), out int patoElección); 
-        if (patoElección == 1)
+        if (patoElección==1)
         {
             Console.WriteLine("Has decidido tomar el camino dificil de los patos");
         }
@@ -172,10 +174,15 @@ class proyecto1A
             Console.WriteLine("║  Un día eres un héroe...          ║");
             Console.WriteLine("║  Y al otro eres sopa de pato. 🍲  ║");
             Console.WriteLine("╚═══════════════════════════════════╝");
+            Environment.Exit(0);
         }
     }
     static void PatoPelea ()
     {
         Console.WriteLine("Han aparecido enemigos");
+    }
+    static void ManejoDeCofres()
+    {
+        Console.WriteLine("Ha aparecido un cofre");
     }
 }
