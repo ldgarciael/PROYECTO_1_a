@@ -3,8 +3,9 @@ class proyecto1A
 {
     public static void Main()
     {
-        int patoVida=0, patoAtaque=0;
+        int patoVida, patoAtaque;
         bool patoAvanzar;
+        string patoMapaNombre;
         Console.WriteLine("===\tBienvenido a Patoaventuras\t===");
         Console.Write("Ingresa tu nombre: ");
         string patoNombre = Console.ReadLine().ToString();
@@ -45,6 +46,36 @@ class proyecto1A
                     Console.Clear();
                     break;
             } 
+        }while(patoAvanzar==true);
+        Console.WriteLine($"Elige el camino que recorrerá nuestro viajero {patoNombre}");
+        do
+        {
+            Console.WriteLine("elige uno de los siguientes caminos:");
+            Console.WriteLine("(1) BOSQUE OSCURO\npuede que hayan tesoros sorprendentes, o quizá no...");
+            Console.WriteLine("(2) CUEVA SOMBRÍA\nlos enemigos atacan primero y puede que hayan visitantes inesperados...");
+            Console.WriteLine("(3) CAMINO DE PIEDRA\nes el camino mas seguro, pero puede que no recibas una buena recompensa...");
+            int.TryParse(Console.ReadLine(),out int patoMapa);
+            switch (patoMapa)
+            {
+                case 1:
+                    patoAvanzar = false;
+                    patoMapaNombre = "BOSQUE OSCURO";
+                    break;
+                case 2:
+                    patoAvanzar = false;
+                    patoMapaNombre = "CUEVA SOMBRÍA";
+                    break;
+                case 3:
+                    patoAvanzar = false;
+                    patoMapaNombre = "CAMINO DE PIEDRA";
+                    break;
+                default:
+                    patoAvanzar = true;
+                    Console.WriteLine("Parece ser que el camino que elegiste no existe en este mundo, vuelve a intentar");
+                    Console.WriteLine("Pulsa cualquier tecla para continuar");
+                    Console.Clear();
+                    break;
+            }
         }while(patoAvanzar==true);
     }    
 }
