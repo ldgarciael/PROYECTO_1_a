@@ -12,6 +12,7 @@ class proyecto1A
         Console.WriteLine("╚════════════════════════════════════════════╝");
         Console.Write("👉 Ingresa tu Pato Nombre: ");
         patoNombre = Console.ReadLine().ToString();
+        Console.Clear();
         EleccionDePersonaje();
         EleccionDeMapa();
         MenuPrincipal();
@@ -40,6 +41,7 @@ class proyecto1A
             switch (patoPersonaje)
             {
                 case 1:
+                    Console.Clear();
                     patoAvanzar=false;
                     patoVida = 100;
                     patoAtaque = 20;
@@ -83,20 +85,20 @@ class proyecto1A
         Console.WriteLine("=======================================================================================");
         do
         {   
-            Console.WriteLine("╔════════════════════════════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║                         Elige uno de los siguientes caminos:                       ║");
-            Console.WriteLine("╠════════════════════════════════════════════════════════════════════════════════════╣");
-            Console.WriteLine("║                   1. Bosque Oscuro                                                 ║");
-            Console.WriteLine("║                        Puede que haya tesoros sorprendentes... o quizá no.         ║");
-            Console.WriteLine("╠────────────────────────────────────────────────────────────────────────────────────╣");
-            Console.WriteLine("║                   2. Cueva Sombría                                                 ║");
-            Console.WriteLine("║                        Los enemigos atacan primero y puede haber visitas           ║");
-            Console.WriteLine("║                        inesperadas...                                              ║");
-            Console.WriteLine("╠────────────────────────────────────────────────────────────────────────────────────╣");
-            Console.WriteLine("║                   3. Camino de Piedra                                              ║");
-            Console.WriteLine("║                        Es el camino más seguro, pero la recompensa podría          ║");
-            Console.WriteLine("║                        no ser tan buena...                                         ║");
-            Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════════════╝"); 
+            Console.WriteLine("╔══════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║            Elige uno de los siguientes caminos:                      ║");
+            Console.WriteLine("╠══════════════════════════════════════════════════════════════════════╣");
+            Console.WriteLine("║     1. Bosque Oscuro 🌑                                              ║");
+            Console.WriteLine("║            Puede que haya tesoros sorprendentes... o quizá no.       ║");
+            Console.WriteLine("╠──────────────────────────────────────────────────────────────────────╣");
+            Console.WriteLine("║     2. Cueva Sombría 🦇                                              ║");
+            Console.WriteLine("║            Los enemigos atacan primero y puede haber visitas         ║");
+            Console.WriteLine("║            inesperadas...                                            ║");
+            Console.WriteLine("╠──────────────────────────────────────────────────────────────────────╣");
+            Console.WriteLine("║     3. Camino de Piedra 🪨                                            ║");
+            Console.WriteLine("║            Es el camino más seguro, pero la recompensa podría        ║");
+            Console.WriteLine("║            no ser tan buena...                                       ║");
+            Console.WriteLine("╚══════════════════════════════════════════════════════════════════════╝"); 
             Console.WriteLine("Selecciona tu camino ingresando su número:");
             int.TryParse(Console.ReadLine(),out int patoMapa);
             switch (patoMapa)
@@ -104,14 +106,18 @@ class proyecto1A
                 case 1:
                     patoAvanzar = false;
                     patoMapaNombre = "BOSQUE OSCURO";
+                    Console.Clear();
                     break;
                 case 2:
                     patoAvanzar = false;
                     patoMapaNombre = "CUEVA SOMBRÍA";
+                    Console.Clear();
+
                     break;
                 case 3:
                     patoAvanzar = false;
                     patoMapaNombre = "CAMINO DE PIEDRA";
+                    Console.Clear();
                     break;
                 default:
                     patoAvanzar = true;
@@ -124,13 +130,18 @@ class proyecto1A
     }
     static void MenuPrincipal()
     {
-        Console.WriteLine("===\tMENÚ PRINCIPAL\t===");
-        Console.WriteLine($"-\t{patoMapaNombre}\t-");
-        Console.WriteLine($"Vida actuarl: {patoVida}");
-        Console.WriteLine($"Poder actual: {patoAtaque}");
-        Console.WriteLine($"Enemigos derrotados: {patoEnemigosDerrotados}");
-        Console.WriteLine("¿Deseas continuar esta pato aventura?");
-        Console.WriteLine("(1) Continuar\t(2) Rendirse");
+        Console.WriteLine("╔════════════════════════════════════════╗");
+        Console.WriteLine("║            MENÚ PRINCIPAL              ║");
+        Console.WriteLine("╠════════════════════════════════════════╣");
+        Console.WriteLine($"  📍 Ubicación: {patoMapaNombre}        ");
+        Console.WriteLine("╠════════════════════════════════════════╣");
+        Console.WriteLine($"║ ❤️  Vida Actual: {patoVida}                     ║");
+        Console.WriteLine($"║ ⚔️  Poder Actual: {patoAtaque}                    ║");
+        Console.WriteLine($"║ 🏆 Enemigos Derrotados: {patoEnemigosDerrotados}              ║");
+        Console.WriteLine("╠════════════════════════════════════════╣");
+        Console.WriteLine("║ ¿Deseas continuar esta pato aventura?  ║");
+        Console.WriteLine("║ (1) Continuar     |     (2) Rendirse   ║");
+        Console.WriteLine("╚════════════════════════════════════════╝");
         int.TryParse(Console.ReadLine(), out int patoElección); 
         if (patoElección == 1)
         {
@@ -138,7 +149,18 @@ class proyecto1A
         }
         else
         {
-            Console.WriteLine("La vida de un pato no es tan sencilla...\nGAME OVER PATITO");
+            Console.Clear();
+            Console.WriteLine("╔═══════════════════════════════════╗");
+            Console.WriteLine("║     ☠️  GAME OVER PATITO ☠️         ║");
+            Console.WriteLine("╠═══════════════════════════════════╣");
+            Console.WriteLine("║  La vida de un pato es difícil... ║");
+            Console.WriteLine("║  Un día eres un héroe...          ║");
+            Console.WriteLine("║  Y al otro eres sopa de pato. 🍲  ║");
+            Console.WriteLine("╚═══════════════════════════════════╝");
         }
+    }
+    static void PatoPelea ()
+    {
+        Console.WriteLine("Han aparecido enemigos");
     }
 }
