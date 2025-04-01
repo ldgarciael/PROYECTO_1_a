@@ -23,16 +23,19 @@ class proyecto1A
                     patoAvanzar=false;
                     patoVida = 100;
                     patoAtaque = 20;
+                    Console.Clear();
                     break;
                 case 2:
                     patoAvanzar=false;
                     patoVida = 70;
                     patoAtaque = 30;
+                    Console.Clear();
                     break;
                 case 3:
                     patoAvanzar=false;
                     patoVida = 85;
-                    patoAtaque = 25; 
+                    patoAtaque = 25;
+                    Console.Clear(); 
                     break;  
                 default:
                     patoAvanzar=true;
