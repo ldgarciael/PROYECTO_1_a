@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lufuj\\.nuget\\packages\\": {}
+    "C:\\Users\\virgi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lufuj\\OneDrive\\Documentos\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\PROYECTO_1_a.csproj",
+      "projectUniqueName": "C:\\Users\\virgi\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\PROYECTO_1_a.csproj",
       "projectName": "PROYECTO_1_a",
-      "projectPath": "C:\\Users\\lufuj\\OneDrive\\Documentos\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\PROYECTO_1_a.csproj",
-      "packagesPath": "C:\\Users\\lufuj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lufuj\\OneDrive\\Documentos\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\obj\\",
+      "projectPath": "C:\\Users\\virgi\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\PROYECTO_1_a.csproj",
+      "packagesPath": "C:\\Users\\virgi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\virgi\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lufuj\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\virgi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
