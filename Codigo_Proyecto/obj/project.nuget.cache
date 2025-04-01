@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "iW0T7CgF0QM=",
   "success": true,
   "projectFilePath": "C:\\Users\\virgi\\OneDrive - Universidad Rafael Landivar\\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\\PROYECTO_1_a\\Codigo_Proyecto\\Codigo_Proyecto.csproj",
+=======
+  "dgSpecHash": "4OHmlOw5Td8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\chris\\OneDrive - Universidad Rafael Landivar\\Archivos de LUIS DAVID GARCIA ELIAS - PROYECTO_1_a\\PROYECTO_1_a\\PROYECTO_1_a\\Codigo_Proyecto\\Codigo_Proyecto.csproj",
+>>>>>>> acaa8c175275b6e3c8f931ca4bfe8286ffc7a5c0
   "expectedPackageFiles": [],
   "logs": []
 }
