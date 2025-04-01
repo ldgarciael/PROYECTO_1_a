@@ -1,0 +1,15 @@
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\bin\Debug\net9.0\PROYECTO_1_a.exe
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\bin\Debug\net9.0\PROYECTO_1_a.deps.json
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\bin\Debug\net9.0\PROYECTO_1_a.runtimeconfig.json
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\bin\Debug\net9.0\PROYECTO_1_a.dll
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\bin\Debug\net9.0\PROYECTO_1_a.pdb
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\PROYECTO_1_a.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\PROYECTO_1_a.AssemblyInfoInputs.cache
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\PROYECTO_1_a.AssemblyInfo.cs
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\PROYECTO_1_a.csproj.CoreCompileInputs.cache
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\PROYECTO_1_a.sourcelink.json
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\PROYECTO_1_a.dll
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\refint\PROYECTO_1_a.dll
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\PROYECTO_1_a.pdb
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\PROYECTO_1_a.genruntimeconfig.cache
+C:\Users\virgi\OneDrive\Proyecto_1_A\PROYECTO_1_a\obj\Debug\net9.0\ref\PROYECTO_1_a.dll

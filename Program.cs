@@ -3,8 +3,7 @@ class proyecto1A
 {
     static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0;
     static bool patoAvanzar;
-    static string patoMapaNombre = "";
-    static string patoNombre = ""; 
+    static string patoMapaNombre = "",patoNombre = "";
     public static void Main()
     {
         Console.WriteLine("╔════════════════════════════════════════════╗");
@@ -13,8 +12,9 @@ class proyecto1A
         Console.WriteLine("╚════════════════════════════════════════════╝");
         Console.Write("👉 Ingresa tu Pato Nombre: ");
         patoNombre = Console.ReadLine().ToString();
-        Console.Clear();
         EleccionDePersonaje();
+        EleccionDeMapa();
+        MenuPrincipal();
     }
     static void EleccionDePersonaje()
     {
