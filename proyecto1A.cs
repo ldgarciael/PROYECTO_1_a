@@ -362,8 +362,9 @@ class proyecto1A
         if (i==1)
         {
             int chepe = CantidadEnemigos(patoCantidadEnemigos);
+            patoVidaEnemigos=20;
             patoVidaEnemigos*=chepe;
-            Console.WriteLine(chepe);
+            Console.WriteLine(patoVidaEnemigos);
             Console.WriteLine("Parece que han aparecido "+ chepe +" bandidos");
         }
     }
