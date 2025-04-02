@@ -18,8 +18,9 @@ class proyecto1A
         EleccionDeMapa();
         MenuPrincipal();
         ManejoDeCofresMapas();
-        PatoPelea();
+        PatoPelea1();
         Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
+        Console.WriteLine("(1) Si\t(2) No");
         int.TryParse(Console.ReadLine(), out patoCofre);
         ManejoDeCofres();
 
@@ -45,6 +46,7 @@ class proyecto1A
             Console.WriteLine("╚════════════════════════════════════════════════════╝");
             Console.WriteLine("Selecciona tu guerrero ingresando su número:");
             int.TryParse(Console.ReadLine(), out patoPersonaje);
+            CleanPantalla();
             switch (patoPersonaje)
             {
                 case 1:
@@ -168,7 +170,7 @@ class proyecto1A
             Environment.Exit(0);
         }
     }
-    static void PatoPelea ()
+    static void PatoPelea1()
     {
         Console.WriteLine("Han aparecido enemigos");
     }
@@ -313,7 +315,7 @@ class proyecto1A
                         CleanPantalla();
                         break;
                     case 3:
-                        Console.WriteLine("Parece que fuiste envenenado... mas suerte a la próxima paito\nSalud -5");
+                        Console.WriteLine("Parece que fuiste envenenado... mas suerte a la próxima patito\nSalud -5");
                         patoVida-=5;
                         CleanPantalla();
                         break;
