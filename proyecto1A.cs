@@ -19,6 +19,9 @@ class proyecto1A
         MenuPrincipal();
         ManejoDeCofresMapas();
         PatoPelea();
+        Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
+        int.TryParse(Console.ReadLine(), out patoCofre);
+        ManejoDeCofres();
 
     }
     static void EleccionDePersonaje()
@@ -45,7 +48,6 @@ class proyecto1A
             switch (patoPersonaje)
             {
                 case 1:
-                    Console.Clear();
                     patoAvanzar=false;
                     patoVida = 100;
                     patoAtaque = 20;
@@ -57,7 +59,6 @@ class proyecto1A
                     CleanPantalla();
                     break;
                 case 2:
-                    Console.Clear();
                     patoAvanzar=false;
                     patoVida = 70;
                     patoAtaque = 30;
@@ -69,7 +70,6 @@ class proyecto1A
                     CleanPantalla();
                     break;
                 case 3:
-                    Console.Clear();
                     patoAvanzar=false;
                     patoVida = 85;
                     patoAtaque = 25;
@@ -81,7 +81,6 @@ class proyecto1A
                     CleanPantalla(); 
                     break;  
                 default:
-                    Console.Clear();
                     patoAvanzar=true;
                     Console.WriteLine("Parece que ese no es un pato personaje disponible, vuelve a intentar");
                     CleanPantalla();
@@ -112,6 +111,7 @@ class proyecto1A
             Console.WriteLine("╚══════════════════════════════════════════════════════════════════════╝"); 
             Console.WriteLine("Selecciona tu camino ingresando su número:");
             int.TryParse(Console.ReadLine(),out int patoMapa);
+            CleanPantalla();
             switch (patoMapa)
             {
                 case 1:
