@@ -19,6 +19,7 @@ class proyecto1A
         MenuPrincipal();
         ManejoDeCofresMapas();
         PatoPelea1();
+        MenuPrincipal();
 
         Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
         Console.WriteLine("(1) Si\t(2) No");
@@ -358,14 +359,12 @@ class proyecto1A
     }
     static void PatoPelea1()
     {
-        // Console.WriteLine(patoVidaEnemigos);
-        // Console.WriteLine("Han aparecido enemigos");
         if (i==1)
         {
-            patoVidaEnemigos=20;
-            patoVidaEnemigos*=CantidadEnemigos(patoCantidadEnemigos);
-            Console.WriteLine(patoVidaEnemigos);
-            Console.WriteLine("Parece que han aparecido "+ CantidadEnemigos(patoCantidadEnemigos) +" ||bandidos");
+            int chepe = CantidadEnemigos(patoCantidadEnemigos);
+            patoVidaEnemigos*=chepe;
+            Console.WriteLine(chepe);
+            Console.WriteLine("Parece que han aparecido "+ chepe +" bandidos");
         }
     }
 }
