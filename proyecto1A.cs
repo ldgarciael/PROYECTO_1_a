@@ -2,7 +2,7 @@
 using System.Collections;
 class proyecto1A
 {
-    static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0, patoCofre, patoPersonaje;
+    static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0, patoCofre, patoPersonaje, i=1,patoCantidadEnemigos, patoVidaEnemigos;
     static bool patoAvanzar;
     static string patoMapaNombre = "",patoNombre = "";
     public static void Main()
@@ -19,6 +19,7 @@ class proyecto1A
         MenuPrincipal();
         ManejoDeCofresMapas();
         PatoPelea1();
+
         Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
         Console.WriteLine("(1) Si\t(2) No");
         int.TryParse(Console.ReadLine(), out patoCofre);
@@ -144,9 +145,9 @@ class proyecto1A
         Console.WriteLine("╠════════════════════════════════════════╣");
         Console.WriteLine($"  📍 Ubicación: {patoMapaNombre}        ");
         Console.WriteLine("╠════════════════════════════════════════╣");
-        Console.WriteLine($"║ ❤️  Vida Actual: {patoVida}                    ║");
-        Console.WriteLine($"║ ⚔️  Poder Actual: {patoAtaque}                    ║");
-        Console.WriteLine($"║ 🏆 Enemigos Derrotados: {patoEnemigosDerrotados}              ║");
+        Console.WriteLine($" ❤️  Vida Actual: {patoVida}                    ");
+        Console.WriteLine($" ⚔️  Poder Actual: {patoAtaque}                    ");
+        Console.WriteLine($" 🏆 Enemigos Derrotados: {patoEnemigosDerrotados}              ");
         Console.WriteLine("╠════════════════════════════════════════╣");
         Console.WriteLine("║ ¿Deseas continuar esta pato aventura?  ║");
         Console.WriteLine("║ (1) Continuar     |     (2) Rendirse   ║");
@@ -169,10 +170,6 @@ class proyecto1A
             Console.WriteLine("╚═══════════════════════════════════╝");
             Environment.Exit(0);
         }
-    }
-    static void PatoPelea1()
-    {
-        Console.WriteLine("Han aparecido enemigos");
     }
     static void ManejoDeCofresMapas()
     {
@@ -340,5 +337,35 @@ class proyecto1A
         Console.WriteLine("Pulsa cualquier tecla para continuar");
         Console.ReadKey();
         Console.Clear();
+    }
+    static int CantidadEnemigos(int patoCantidadEnemigos)
+    {
+        if (i==1)
+        {
+            Random random3 = new Random();
+            {
+                patoCantidadEnemigos = random3.Next(1,4);
+            }
+        }
+        else if (i==2)
+        {
+            Random random4 = new Random();
+            {
+                patoCantidadEnemigos = random4.Next(1,3);
+            }
+        }
+        return patoCantidadEnemigos;
+    }
+    static void PatoPelea1()
+    {
+        // Console.WriteLine(patoVidaEnemigos);
+        // Console.WriteLine("Han aparecido enemigos");
+        if (i==1)
+        {
+            patoVidaEnemigos=20;
+            patoVidaEnemigos*=CantidadEnemigos(patoCantidadEnemigos);
+            Console.WriteLine(patoVidaEnemigos);
+            Console.WriteLine("Parece que han aparecido "+ CantidadEnemigos(patoCantidadEnemigos) +" ||bandidos");
+        }
     }
 }
