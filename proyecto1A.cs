@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections;
 class proyecto1A
 {
-    static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0;
+    static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0, patoCofre, patoPersonaje;
     static bool patoAvanzar;
     static string patoMapaNombre = "",patoNombre = "";
     public static void Main()
@@ -16,7 +17,9 @@ class proyecto1A
         EleccionDePersonaje();
         EleccionDeMapa();
         MenuPrincipal();
+        ManejoDeCofresMapas();
         PatoPelea();
+
     }
     static void EleccionDePersonaje()
     {
@@ -38,7 +41,7 @@ class proyecto1A
             Console.WriteLine("║     Ágil y letal a distancia con su arco.          ║");
             Console.WriteLine("╚════════════════════════════════════════════════════╝");
             Console.WriteLine("Selecciona tu guerrero ingresando su número:");
-            int.TryParse(Console.ReadLine(), out int patoPersonaje);
+            int.TryParse(Console.ReadLine(), out patoPersonaje);
             switch (patoPersonaje)
             {
                 case 1:
@@ -51,9 +54,7 @@ class proyecto1A
                     Console.WriteLine("╠════════════════════════════════════════════════════╣");
                     Console.WriteLine("║  ¡Prepárate para la aventura, valiente pato!       ║");
                     Console.WriteLine("╚════════════════════════════════════════════════════╝");
-                    Console.WriteLine("Presione cualquier tecla para continuar...");
-                    Console.ReadKey();
-                    Console.Clear();
+                    CleanPantalla();
                     break;
                 case 2:
                     Console.Clear();
@@ -65,9 +66,7 @@ class proyecto1A
                     Console.WriteLine("╠════════════════════════════════════════════════════╣");
                     Console.WriteLine("║  ¡Prepárate para la aventura, valiente pato!       ║");
                     Console.WriteLine("╚════════════════════════════════════════════════════╝");
-                    Console.WriteLine("Presione cualquier tecla para continuar...");
-                    Console.ReadKey();
-                    Console.Clear();
+                    CleanPantalla();
                     break;
                 case 3:
                     Console.Clear();
@@ -79,17 +78,13 @@ class proyecto1A
                     Console.WriteLine("╠════════════════════════════════════════════════════╣");
                     Console.WriteLine("║  ¡Prepárate para la aventura, valiente pato!       ║");
                     Console.WriteLine("╚════════════════════════════════════════════════════╝");
-                    Console.WriteLine("Presione cualquier tecla para continuar...");
-                    Console.ReadKey();
-                    Console.Clear(); 
+                    CleanPantalla(); 
                     break;  
                 default:
                     Console.Clear();
                     patoAvanzar=true;
                     Console.WriteLine("Parece que ese no es un pato personaje disponible, vuelve a intentar");
-                    Console.Write("Presiona cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
+                    CleanPantalla();
                     break;
             } 
         }while(patoAvanzar==true);
@@ -122,25 +117,20 @@ class proyecto1A
                 case 1:
                     patoAvanzar = false;
                     patoMapaNombre = "BOSQUE OSCURO";
-                    Console.Clear();
                     break;
                 case 2:
                     patoAvanzar = false;
                     patoMapaNombre = "CUEVA SOMBRÍA";
-                    Console.Clear();
 
                     break;
                 case 3:
                     patoAvanzar = false;
                     patoMapaNombre = "CAMINO DE PIEDRA";
-                    Console.Clear();
                     break;
                 default:
                     patoAvanzar = true;
                     Console.WriteLine("Parece ser que el camino que elegiste no existe en este mundo, vuelve a intentar");
-                    Console.WriteLine("Pulsa cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
+                    CleanPantalla();
                     break;
             }
         }while(patoAvanzar==true);
@@ -163,6 +153,7 @@ class proyecto1A
         if (patoElección==1)
         {
             Console.WriteLine("Has decidido tomar el camino dificil de los patos");
+            CleanPantalla();
         }
         else
         {
@@ -181,8 +172,171 @@ class proyecto1A
     {
         Console.WriteLine("Han aparecido enemigos");
     }
+    static void ManejoDeCofresMapas()
+    {
+        if (patoMapaNombre=="BOSQUE OSCURO")
+        {
+            Random random = new Random();
+            {
+                int patoMapa1Random = random.Next(1,3);
+                switch (patoMapa1Random)
+                {
+                    case 1:
+                        Console.WriteLine("Parece que has encontrado un cofre misterioso\n¿deseas abrirlo?");
+                        Console.WriteLine("(1) Si\t(2) No");
+                        int.TryParse(Console.ReadLine(), out patoCofre);
+                        ManejoDeCofres();
+                        break;
+                    default:
+                        Console.WriteLine("¡Oh no! Parece ser que caiste en una trampa ¡¡que mala pata!!\nSalud -2");
+                        patoVida-=2;
+                        CleanPantalla();
+                        break;
+                }
+            }
+        }
+        else if (patoMapaNombre=="CUEVA SOMBRÍA")
+        {
+            Random random1 = new Random();
+            {
+                int patoMapa2Random = random1.Next(1,3);
+                switch (patoMapa2Random)
+                {
+                    case 1:
+                        Console.WriteLine($"/enemigo sigiloso atacó a {patoNombre}/\nSalud -2");
+                        patoVida-=2;
+                        CleanPantalla();
+                        break;
+                    default:
+                        Console.WriteLine("Parece que no pasa nada... por ahora...");
+                        CleanPantalla();
+                        break;
+                }
+            }
+        }
+        else
+        {
+            Random random = new Random();
+            {
+                int patoMapa1Random = random.Next(1,3);
+                switch (patoMapa1Random)
+                {
+                    case 1:
+                        Console.WriteLine("Parece que has encontrado un cofre misterioso\n¿deseas abrirlo?");
+                        Console.WriteLine("(1) Si\t(2) No");
+                        int.TryParse(Console.ReadLine(), out patoCofre);
+                        ManejoDeCofres1();
+                        break;
+                    default:
+                        Console.WriteLine("Parece que no tuvimos suerte encontrando recompensas esta vez patito...");
+                        CleanPantalla();
+                        break;
+                }
+            }
+        }
+    }
     static void ManejoDeCofres()
     {
-        Console.WriteLine("Ha aparecido un cofre");
+        if (patoCofre==1)
+        {
+            Random random2 = new Random();
+            {
+                int patoCofreEfectos=random2.Next(1,4);
+                switch (patoCofreEfectos)
+                {
+                    case 1:
+                        if (patoPersonaje==1)
+                        {
+                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            patoVida=Math.Min(patoVida+10,100);
+                            CleanPantalla();
+                        }
+                        else if (patoPersonaje==2)
+                        {
+                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            patoVida=Math.Min(patoVida+10,70);
+                            CleanPantalla();
+                        }
+                        else if (patoPersonaje==3)
+                        {
+                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            patoVida=Math.Min(patoVida+10,85);
+                            CleanPantalla();
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("Parece que te has hecho más fuerte...\nAtq +7");
+                        patoAtaque+=7;
+                        CleanPantalla();
+                        break;
+                    default:
+                        Console.WriteLine("Parece que fuiste envenenado... mas suerte a la próxima paito\nSalud -5");
+                        patoVida-=5;
+                        CleanPantalla();
+                        break;
+                }
+            }
+        }
+    }
+    static void ManejoDeCofres1()
+    {
+        if (patoCofre==1)
+        {
+            Random random2 = new Random();
+            {
+                int patoCofreEfectos=random2.Next(1,5);
+                switch (patoCofreEfectos)
+                {
+                    case 1:
+                        if (patoPersonaje==1)
+                        {
+                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            patoVida=Math.Min(patoVida+10,100);
+                            CleanPantalla();
+                        }
+                        else if (patoPersonaje==2)
+                        {
+                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            patoVida=Math.Min(patoVida+10,70);
+                            CleanPantalla();
+                        }
+                        else if (patoPersonaje==3)
+                        {
+                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            patoVida=Math.Min(patoVida+10,85);
+                            CleanPantalla();
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("Parece que te has hecho más fuerte...\nAtq +7");
+                        patoAtaque+=7;
+                        CleanPantalla();
+                        break;
+                    case 3:
+                        Console.WriteLine("Parece que fuiste envenenado... mas suerte a la próxima paito\nSalud -5");
+                        patoVida-=5;
+                        CleanPantalla();
+                        break;
+                    default:
+                        Console.WriteLine("¡Oops! parece que esta vez encontramos un cofre sin nada :c");
+                        CleanPantalla();
+                        break;
+                }
+            }
+        }
+    }
+    static void FinDelJuego()
+    {
+        if (patoVida<=0)
+        {
+            Console.WriteLine("GAME OVER\nHoy no es tu día patito, pero ¡volverás más fuerte!");
+            Environment.Exit(0);
+        }
+    }
+    static void CleanPantalla()
+    {
+        Console.WriteLine("Pulsa cualquier tecla para continuar");
+        Console.ReadKey();
+        Console.Clear();
     }
 }
