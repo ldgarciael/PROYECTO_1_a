@@ -186,6 +186,7 @@ class proyecto1A
                         Console.WriteLine("(1) Si\t(2) No");
                         int.TryParse(Console.ReadLine(), out patoCofre);
                         ManejoDeCofres();
+                        CleanPantalla();
                         break;
                     default:
                         Console.WriteLine("¡Oh no! Parece ser que caiste en una trampa ¡¡que mala pata!!\nSalud -2");
@@ -226,6 +227,7 @@ class proyecto1A
                         Console.WriteLine("(1) Si\t(2) No");
                         int.TryParse(Console.ReadLine(), out patoCofre);
                         ManejoDeCofres1();
+                        CleanPantalla();
                         break;
                     default:
                         Console.WriteLine("Parece que no tuvimos suerte encontrando recompensas esta vez patito...");
@@ -357,6 +359,31 @@ class proyecto1A
         }
         return patoCantidadEnemigos;
     }
+    static int PoderEnemigos(int patoAtaqueEnemigos)
+    {
+        if (i==1)
+        {
+            Random random5 = new Random();
+            {
+                patoAtaqueEnemigos = random5.Next(1,6);
+            }
+        }
+        else if (i==2)
+        {
+            Random random6 = new Random();
+            {
+                patoAtaqueEnemigos = random6.Next(5,11);
+            }
+        }
+        else
+        {
+            Random random7 = new Random();
+            {
+                patoAtaqueEnemigos = random7.Next(10,21);
+            }
+        }
+        return patoAtaqueEnemigos;
+    }
     static void PatoPelea1()
     {
         if (i==1)
@@ -364,8 +391,34 @@ class proyecto1A
             int chepe = CantidadEnemigos(patoCantidadEnemigos);
             patoVidaEnemigos=20;
             patoVidaEnemigos*=chepe;
-            Console.WriteLine(patoVidaEnemigos);
             Console.WriteLine("Parece que han aparecido "+ chepe +" bandidos");
+            Console.WriteLine("A continuación se llevará una intensa batalla");
+            while(patoVidaEnemigos>0||patoVida>0)
+            {
+                Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
+                int.TryParse(Console.ReadLine(), out int patoTurno);
+                switch (patoTurno)
+                {
+                    case 1:
+                        patoVidaEnemigos-=patoAtaque;
+                        Console.WriteLine(patoVidaEnemigos);
+                        Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                        int ataque = PoderEnemigos(patoCantidadEnemigos);
+                        patoVida-=ataque;
+                        Console.WriteLine(patoVida);
+                        Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                        break;
+                    default:
+                        Console.WriteLine("GAME OVER patito");
+                        Environment.Exit(0);
+                        break;
+                }
+            }
+                FinDelJuego();
+                if (patoVidaEnemigos<=0)
+                {
+                    Console.WriteLine($"Bien hecho {patoNombre} siguamos avanzando en nuestra aventura");
+                }
         }
     }
 }
