@@ -19,13 +19,18 @@ class proyecto1A
         MenuPrincipal();
         ManejoDeCofresMapas();
         PatoPelea1();
-        i=2;
-        PatoPelea1();
-
         Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
         Console.WriteLine("(1) Si\t(2) No");
         int.TryParse(Console.ReadLine(), out patoCofre);
         ManejoDeCofres();
+        i=2;
+        PatoPelea1();
+        Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
+        Console.WriteLine("(1) Si\t(2) No");
+        int.TryParse(Console.ReadLine(), out patoCofre);
+        ManejoDeCofres();
+        i=3;
+        PatoPelea1();
 
     }
     static void EleccionDePersonaje()
