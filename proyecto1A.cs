@@ -2,7 +2,7 @@
 using System.Collections;
 class proyecto1A
 {
-    static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0, patoCofre, patoPersonaje, i=1,patoCantidadEnemigos, patoVidaEnemigos;
+    static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0, patoCofre, patoPersonaje, i=1,patoCantidadEnemigos, patoVidaEnemigos, BMJ, ataque;
     static bool patoAvanzar;
     static string patoMapaNombre = "",patoNombre = "";
     public static void Main()
@@ -19,7 +19,8 @@ class proyecto1A
         MenuPrincipal();
         ManejoDeCofresMapas();
         PatoPelea1();
-        MenuPrincipal();
+        i=2;
+        PatoPelea1();
 
         Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
         Console.WriteLine("(1) Si\t(2) No");
@@ -388,10 +389,10 @@ class proyecto1A
     {
         if (i==1)
         {
-            int chepe = CantidadEnemigos(patoCantidadEnemigos);
+            BMJ = CantidadEnemigos(patoCantidadEnemigos);
             patoVidaEnemigos=20;
-            patoVidaEnemigos*=chepe;
-            Console.WriteLine("Parece que han aparecido "+ chepe +" bandidos");
+            patoVidaEnemigos*=BMJ;
+            Console.WriteLine("Parece que han aparecido "+ BMJ +" bandidos");
             Console.WriteLine("A continuación se llevará una intensa batalla");
             while(patoVidaEnemigos>0)
             {
@@ -405,10 +406,47 @@ class proyecto1A
                         if (patoVidaEnemigos<=0)
                         {
                             Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
-                            patoEnemigosDerrotados+=chepe;
+                            patoEnemigosDerrotados+=BMJ;
+                            MenuPrincipal();
                             break;
                         }
-                        int ataque = PoderEnemigos(patoCantidadEnemigos);
+                        ataque = PoderEnemigos(patoCantidadEnemigos);
+                        patoVida-=ataque;
+                        Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                        FinDelJuego();
+                        CleanPantalla();
+                        break;
+                    default:
+                        Console.WriteLine("GAME OVER patito");
+                        Environment.Exit(0);
+                        break;
+                }
+            }
+        }
+        else if (i==2)
+        {
+            BMJ = CantidadEnemigos(patoCantidadEnemigos);
+            patoVidaEnemigos=25;
+            patoVidaEnemigos*=BMJ;
+            Console.WriteLine("Parece que han aparecido "+ BMJ +" monstruos");
+            Console.WriteLine("A continuación se llevará una intensa batalla");
+            while(patoVidaEnemigos>0)
+            {
+                Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
+                int.TryParse(Console.ReadLine(), out int patoTurno);
+                switch (patoTurno)
+                {
+                    case 1:
+                        patoVidaEnemigos-=patoAtaque;
+                        Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                        if (patoVidaEnemigos<=0)
+                        {
+                            Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                            patoEnemigosDerrotados+=BMJ;
+                            MenuPrincipal();
+                            break;
+                        }
+                        ataque = PoderEnemigos(patoCantidadEnemigos);
                         patoVida-=ataque;
                         Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
                         FinDelJuego();
