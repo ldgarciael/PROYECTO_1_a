@@ -393,7 +393,7 @@ class proyecto1A
             patoVidaEnemigos*=chepe;
             Console.WriteLine("Parece que han aparecido "+ chepe +" bandidos");
             Console.WriteLine("A continuación se llevará una intensa batalla");
-            while(patoVidaEnemigos>0||patoVida>0)
+            while(patoVidaEnemigos>0)
             {
                 Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
                 int.TryParse(Console.ReadLine(), out int patoTurno);
@@ -401,12 +401,18 @@ class proyecto1A
                 {
                     case 1:
                         patoVidaEnemigos-=patoAtaque;
-                        Console.WriteLine(patoVidaEnemigos);
                         Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                        if (patoVidaEnemigos<=0)
+                        {
+                            Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                            patoEnemigosDerrotados+=chepe;
+                            break;
+                        }
                         int ataque = PoderEnemigos(patoCantidadEnemigos);
                         patoVida-=ataque;
-                        Console.WriteLine(patoVida);
                         Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                        FinDelJuego();
+                        CleanPantalla();
                         break;
                     default:
                         Console.WriteLine("GAME OVER patito");
@@ -414,11 +420,6 @@ class proyecto1A
                         break;
                 }
             }
-                FinDelJuego();
-                if (patoVidaEnemigos<=0)
-                {
-                    Console.WriteLine($"Bien hecho {patoNombre} siguamos avanzando en nuestra aventura");
-                }
         }
     }
 }
