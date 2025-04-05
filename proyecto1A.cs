@@ -459,5 +459,39 @@ class proyecto1A
                 }
             }
         }
+        else
+        {
+            patoVidaEnemigos=70;
+             Console.WriteLine("Parece que ha aparecido el jefe final ¡¡Ten cuidado patito!!");
+            Console.WriteLine("A continuación se llevará una intensa batalla");
+            while(patoVidaEnemigos>0)
+            {
+                Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
+                int.TryParse(Console.ReadLine(), out int patoTurno);
+                switch (patoTurno)
+                {
+                    case 1:
+                        patoVidaEnemigos-=patoAtaque;
+                        Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                        if (patoVidaEnemigos<=0)
+                        {
+                            Console.WriteLine($"Bien hecho {patoNombre}, venciste al jefe final, ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!!");
+                            patoEnemigosDerrotados+=BMJ;
+                            MenuPrincipal();
+                            break;
+                        }
+                        ataque = PoderEnemigos(patoCantidadEnemigos);
+                        patoVida-=ataque;
+                        Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                        FinDelJuego();
+                        CleanPantalla();
+                        break;
+                    default:
+                        Console.WriteLine("GAME OVER patito");
+                        Environment.Exit(0);
+                        break;
+                }
+            }
+        }
     }
 }
