@@ -187,7 +187,12 @@ class proyecto1A
                 switch (patoMapa1Random)
                 {
                     case 1:
-                        Console.WriteLine("Parece que has encontrado un cofre misterioso\n¿deseas abrirlo?");
+                        Console.WriteLine("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+                        Console.WriteLine("┃  🎁 Encontraste un ¡Tesoro Misterioso! 🎁 ┃");
+                        Console.WriteLine("┃  🏛️  RUINAS ANCESTRALES DEL BOSQUE 🏛️        ┃");
+                        Console.WriteLine("┃  ¡Un cofre entre templos olvidados!       ┃");
+                        Console.WriteLine("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+                        Console.WriteLine("¿Abrimos el cofre y vemos qué pato-locura hay dentro?");
                         Console.WriteLine("(1) Si\t(2) No");
                         int.TryParse(Console.ReadLine(), out patoCofre);
                         ManejoDeCofres();
@@ -228,6 +233,11 @@ class proyecto1A
                 switch (patoMapa1Random)
                 {
                     case 1:
+                        Console.WriteLine("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+                        Console.WriteLine("┃  🎁 Encontraste un ¡Tesoro Misterioso! 🎁 ┃");
+                        Console.WriteLine("┃  🦆🗿 ESTATUAS ANCESTRALES DE PIEDRA 🗿🦆  ┃");
+                        Console.WriteLine("┃  ¡Un cofre protegido por antiguos guardianes! ┃");
+                        Console.WriteLine("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
                         Console.WriteLine("Parece que has encontrado un cofre misterioso\n¿deseas abrirlo?");
                         Console.WriteLine("(1) Si\t(2) No");
                         int.TryParse(Console.ReadLine(), out patoCofre);
@@ -336,7 +346,13 @@ class proyecto1A
     {
         if (patoVida<=0)
         {
-            Console.WriteLine("GAME OVER\nHoy no es tu día patito, pero ¡volverás más fuerte!");
+            Console.Clear();
+            Console.WriteLine("╔═══════════════════════════════════╗");
+            Console.WriteLine("║     ☠️  GAME OVER PATITO ☠️         ║");
+            Console.WriteLine("╠═══════════════════════════════════╣");
+            Console.WriteLine("║  Hoy no es tu día patito,         ║");
+            Console.WriteLine("║  pero ¡volverás más fuerte!       ║");
+            Console.WriteLine("╚═══════════════════════════════════╝");
             Environment.Exit(0);
         }
     }
@@ -426,7 +442,7 @@ class proyecto1A
                         default:
                             Console.WriteLine("GAME OVER patito");
                             Environment.Exit(0);
-                            break;
+                            break;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                     }
                 }
             }
