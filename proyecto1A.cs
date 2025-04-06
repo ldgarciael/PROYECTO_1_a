@@ -189,7 +189,7 @@ class proyecto1A
                     case 1:
                         Console.WriteLine("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
                         Console.WriteLine("┃  🎁 Encontraste un ¡Tesoro Misterioso! 🎁 ┃");
-                        Console.WriteLine("┃  🏛️  RUINAS ANCESTRALES DEL BOSQUE 🏛️        ┃");
+                        Console.WriteLine("┃  🏛️  RUINAS ANCESTRALES DEL BOSQUE 🏛️       ┃");
                         Console.WriteLine("┃  ¡Un cofre entre templos olvidados!       ┃");
                         Console.WriteLine("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
                         Console.WriteLine("¿Abrimos el cofre y vemos qué pato-locura hay dentro?");
@@ -222,14 +222,13 @@ class proyecto1A
                 {
                     case 1:
                         Console.WriteLine("╔══════════════════════════════════════════════════╗");
-                        Console.WriteLine($"║     🌀 ¡Un enemigo sigiloso atacó a {patoNombre}!    ║");
+                        Console.WriteLine($"║     🌀 ¡Un enemigo sigiloso atacó a {patoNombre}!        ║");
                         Console.WriteLine("║                                                  ║");
                         Console.WriteLine("║   Todo fue un parpadeo, una ilusión...           ║");
                         Console.WriteLine("║   ¿O acaso fue magia? 🐤🪄                        ║");
                         Console.WriteLine("║                                                  ║");
-                        Console.WriteLine("║             🌪️ Salud -2 🌪️                        ║");
+                        Console.WriteLine("║             🌪️  Salud -2 🌪️                        ║");
                         Console.WriteLine("╚══════════════════════════════════════════════════╝");
-
                         patoVida-=2;
                         CleanPantalla();
                         break;
@@ -280,12 +279,12 @@ class proyecto1A
                         if (patoPersonaje==1)
                         {
                             Console.WriteLine("╔══════════════════════════════════════════════════╗");
-                            Console.WriteLine("║               💖 ¡Recuperaste Salud! 💖              ║");
+                            Console.WriteLine("║             💖 ¡Recuperaste Salud! 💖            ║");
                             Console.WriteLine("║                                                  ║");
-                            Console.WriteLine("║   Recuperaste fuerzas, patito valiente. 🐤        ║");
-                            Console.WriteLine("║   ¡Tu energía vuelve como un río mágico! 💧✨      ║");
+                            Console.WriteLine("║   Recuperaste fuerzas, patito valiente. 🐤       ║");
+                            Console.WriteLine("║   ¡Tu energía vuelve como un río mágico! 💧✨    ║");
                             Console.WriteLine("║                                                  ║");
-                            Console.WriteLine("║              ❤️ +10 Salud ❤️                     ║");
+                            Console.WriteLine("║              ❤️  +10 Salud ❤️                      ║");
                             Console.WriteLine("╚══════════════════════════════════════════════════╝");
                             patoVida=Math.Min(patoVida+10,100);
                             CleanPantalla();
@@ -326,7 +325,6 @@ class proyecto1A
                         Console.WriteLine("║                                                  ║");
                         Console.WriteLine("║               🗡️ Ataque +7 🗡️                      ║");
                         Console.WriteLine("╚══════════════════════════════════════════════════╝");
-
                         patoAtaque+=7;
                         CleanPantalla();
                         break;
@@ -507,8 +505,14 @@ class proyecto1A
                 BMJ = CantidadEnemigos(patoCantidadEnemigos);
                 patoVidaEnemigos=20;
                 patoVidaEnemigos*=BMJ;
-                Console.WriteLine("Parece que han aparecido "+ BMJ +" bandidos");
-                Console.WriteLine("A continuación se llevará una intensa batalla\nen este mapa los enemigos atacan primero, asi que ¡¡¡ten cuidado paito!!!");
+                Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                Console.WriteLine($"║🏴‍☠️  ¡Alerta! {BMJ} bandidos se aproximan a toda prisa! ║");
+                Console.WriteLine("║                                                    ║");
+                Console.WriteLine("║   Se oyen pasos, gritos y espadas chocar...        ║");
+                Console.WriteLine("║   ¡Una batalla está por comenzar, patito! 🐤💣     ║");
+                Console.WriteLine("║                                                    ║");
+                Console.WriteLine("║              ⚠️  ¡En guardia! ⚠️                     ║");
+                Console.WriteLine("╚════════════════════════════════════════════════════╝");
                 while (patoVidaEnemigos>0)
                 {
                     Console.WriteLine("A pelear patito");
