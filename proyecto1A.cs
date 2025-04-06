@@ -205,9 +205,9 @@ class proyecto1A
                         Console.WriteLine("║   Un movimiento en falso y... ¡zas!              ║");
                         Console.WriteLine("║   El suelo te jugó una mala pasada, patito. 🐤   ║");
                         Console.WriteLine("║                                                  ║");
-                        Console.WriteLine("║             💔 Salud -2 💔                        ║");
+                        Console.WriteLine("║             💔 Salud -5 💔                        ║");
                         Console.WriteLine("╚══════════════════════════════════════════════════╝");
-                        patoVida-=2;
+                        patoVida-=5;
                         CleanPantalla();
                         break;
                 }
@@ -227,9 +227,9 @@ class proyecto1A
                         Console.WriteLine("║   Todo fue un parpadeo, una ilusión...           ║");
                         Console.WriteLine("║   ¿O acaso fue magia? 🐤🪄                        ║");
                         Console.WriteLine("║                                                  ║");
-                        Console.WriteLine("║             🌪️  Salud -2 🌪️                        ║");
+                        Console.WriteLine("║             🌪️  Salud -5 🌪️                        ║");
                         Console.WriteLine("╚══════════════════════════════════════════════════╝");
-                        patoVida-=2;
+                        patoVida-=5;
                         CleanPantalla();
                         break;
                     default:
