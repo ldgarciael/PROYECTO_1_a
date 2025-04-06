@@ -402,19 +402,31 @@ class proyecto1A
                 Console.WriteLine("A continuación se llevará una intensa batalla\nen este mapa los enemigos atacan primero, asi que ¡¡¡ten cuidado paito!!!");
                 while (patoVidaEnemigos>0)
                 {
+                    Console.WriteLine("A pelear patito");
                     ataque = PoderEnemigos(patoCantidadEnemigos);
                     patoVida-=ataque;
                     Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
                     FinDelJuego();
-                    patoVidaEnemigos-=patoAtaque;
-                    Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
-                    if (patoVidaEnemigos<=0)
+                    Console.WriteLine("Ahora es tu turno\n(1) atacar\t(2) huir");
+                    int.TryParse(Console.ReadLine(), out patoTurno);
+                    switch (patoTurno)
                     {
-                        Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
-                        patoEnemigosDerrotados+=BMJ;
-                        CleanPantalla();
-                        MenuPrincipal();
-                        break;
+                        case 1:
+                            patoVidaEnemigos-=patoAtaque;
+                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            if (patoVidaEnemigos<=0)
+                            {
+                                Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                                patoEnemigosDerrotados+=BMJ;
+                                CleanPantalla();
+                                MenuPrincipal();
+                                break;
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("GAME OVER patito");
+                            Environment.Exit(0);
+                            break;
                     }
                 }
             }
@@ -427,19 +439,31 @@ class proyecto1A
                 Console.WriteLine("A continuación se llevará una intensa batalla\nen este mapa los enemigos atacan primero, asi que ¡¡¡ten cuidado paito!!!");
                 while (patoVidaEnemigos>0)
                 {
+                    Console.WriteLine("A pelear patito");
                     ataque = PoderEnemigos(patoCantidadEnemigos);
                     patoVida-=ataque;
                     Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
                     FinDelJuego();
-                    patoVidaEnemigos-=patoAtaque;
-                    Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
-                    if (patoVidaEnemigos<=0)
+                    Console.WriteLine("Ahora es tu turno\n(1) atacar\t(2) huir");
+                    int.TryParse(Console.ReadLine(), out patoTurno);
+                    switch (patoTurno)
                     {
-                        Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
-                        patoEnemigosDerrotados+=BMJ;
-                        CleanPantalla();
-                        MenuPrincipal();
-                        break;
+                        case 1:
+                            patoVidaEnemigos-=patoAtaque;
+                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            if (patoVidaEnemigos<=0)
+                            {
+                                Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                                patoEnemigosDerrotados+=BMJ;
+                                CleanPantalla();
+                                MenuPrincipal();
+                                break;
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("GAME OVER patito");
+                            Environment.Exit(0);
+                            break;
                     }
                 }
             }
@@ -451,7 +475,6 @@ class proyecto1A
                 while (patoVidaEnemigos>0)
                 {
                     Console.WriteLine("A pelear patito");
-                    int.TryParse(Console.ReadLine(), out patoTurno);
                     ataque = PoderEnemigos(patoCantidadEnemigos);
                     patoVida-=ataque;
                     Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
