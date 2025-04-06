@@ -114,7 +114,7 @@ class proyecto1A
             Console.WriteLine("║            Los enemigos atacan primero y puede haber visitas         ║");
             Console.WriteLine("║            inesperadas...                                            ║");
             Console.WriteLine("╠──────────────────────────────────────────────────────────────────────╣");
-            Console.WriteLine("║     3. Camino de Piedra 🪨                                            ║");
+            Console.WriteLine("║     3. Camino de Piedra 🛤️                                           ║");
             Console.WriteLine("║            Es el camino más seguro, pero la recompensa podría        ║");
             Console.WriteLine("║            no ser tan buena...                                       ║");
             Console.WriteLine("╚══════════════════════════════════════════════════════════════════════╝"); 
@@ -199,7 +199,14 @@ class proyecto1A
                         CleanPantalla();
                         break;
                     default:
-                        Console.WriteLine("¡Oh no! Parece ser que caiste en una trampa ¡¡que mala pata!!\nSalud -2");
+                        Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                        Console.WriteLine("║           🌫️  ¡Caíste en una trampa! 🌫️               ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║   Un movimiento en falso y... ¡zas!              ║");
+                        Console.WriteLine("║   El suelo te jugó una mala pasada, patito. 🐤   ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║             💔 Salud -2 💔                        ║");
+                        Console.WriteLine("╚══════════════════════════════════════════════════╝");
                         patoVida-=2;
                         CleanPantalla();
                         break;
@@ -214,7 +221,15 @@ class proyecto1A
                 switch (patoMapa2Random)
                 {
                     case 1:
-                        Console.WriteLine($"/enemigo sigiloso atacó a {patoNombre}/\nSalud -2");
+                        Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                        Console.WriteLine($"║     🌀 ¡Un enemigo sigiloso atacó a {patoNombre}!    ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║   Todo fue un parpadeo, una ilusión...           ║");
+                        Console.WriteLine("║   ¿O acaso fue magia? 🐤🪄                        ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║             🌪️ Salud -2 🌪️                        ║");
+                        Console.WriteLine("╚══════════════════════════════════════════════════╝");
+
                         patoVida-=2;
                         CleanPantalla();
                         break;
@@ -242,7 +257,7 @@ class proyecto1A
                         Console.WriteLine("(1) Si\t(2) No");
                         int.TryParse(Console.ReadLine(), out patoCofre);
                         ManejoDeCofres1();
-                        CleanPantalla();
+                        CleanPantalla(); 
                         break;
                     default:
                         Console.WriteLine("Parece que no tuvimos suerte encontrando recompensas esta vez patito...");
@@ -264,30 +279,66 @@ class proyecto1A
                     case 1:
                         if (patoPersonaje==1)
                         {
-                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                            Console.WriteLine("║               💖 ¡Recuperaste Salud! 💖              ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║   Recuperaste fuerzas, patito valiente. 🐤        ║");
+                            Console.WriteLine("║   ¡Tu energía vuelve como un río mágico! 💧✨      ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║              ❤️ +10 Salud ❤️                     ║");
+                            Console.WriteLine("╚══════════════════════════════════════════════════╝");
                             patoVida=Math.Min(patoVida+10,100);
                             CleanPantalla();
                         }
                         else if (patoPersonaje==2)
                         {
-                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                            Console.WriteLine("║               💖 ¡Recuperaste Salud! 💖              ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║   Recuperaste fuerzas, patito valiente. 🐤        ║");
+                            Console.WriteLine("║   ¡Tu energía vuelve como un río mágico! 💧✨      ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║              ❤️ +10 Salud ❤️                     ║");
+                            Console.WriteLine("╚══════════════════════════════════════════════════╝");
                             patoVida=Math.Min(patoVida+10,70);
                             CleanPantalla();
                         }
                         else if (patoPersonaje==3)
                         {
-                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                            Console.WriteLine("║               💖 ¡Recuperaste Salud! 💖              ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║   Recuperaste fuerzas, patito valiente. 🐤        ║");
+                            Console.WriteLine("║   ¡Tu energía vuelve como un río mágico! 💧✨      ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║              ❤️ +10 Salud ❤️                     ║");
+                            Console.WriteLine("╚══════════════════════════════════════════════════╝");
                             patoVida=Math.Min(patoVida+10,85);
                             CleanPantalla();
                         }
                         break;
                     case 2:
-                        Console.WriteLine("Parece que te has hecho más fuerte...\nAtq +7");
+                        Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                        Console.WriteLine("║               💥 ¡Te has fortalecido! 💥             ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║   Sientes el poder fluir por tus alas. 🐤🔥         ║");
+                        Console.WriteLine("║   ¡Estás listo para enfrentar cualquier reto! ⚔️   ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║               🗡️ Ataque +7 🗡️                      ║");
+                        Console.WriteLine("╚══════════════════════════════════════════════════╝");
+
                         patoAtaque+=7;
                         CleanPantalla();
                         break;
                     default:
-                        Console.WriteLine("Parece que fuiste envenenado... mas suerte a la próxima paito\nSalud -5");
+                        Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                        Console.WriteLine("║            ☠️ ¡Has sido envenenado! ☠️           ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║   Parece que fuiste envenenado...                ║");
+                        Console.WriteLine("║   Más suerte a la próxima, patito. 🐤            ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║              💔 Salud -5 💔                      ║");
+                        Console.WriteLine("╚══════════════════════════════════════════════════╝");
                         patoVida-=5;
                         CleanPantalla();
                         break;
@@ -307,35 +358,77 @@ class proyecto1A
                     case 1:
                         if (patoPersonaje==1)
                         {
-                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                            Console.WriteLine("║               💖 ¡Recuperaste Salud! 💖              ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║   Recuperaste fuerzas, patito valiente. 🐤        ║");
+                            Console.WriteLine("║   ¡Tu energía vuelve como un río mágico! 💧✨      ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║              ❤️ +10 Salud ❤️                     ║");
+                            Console.WriteLine("╚══════════════════════════════════════════════════╝");
                             patoVida=Math.Min(patoVida+10,100);
                             CleanPantalla();
                         }
                         else if (patoPersonaje==2)
                         {
-                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                            Console.WriteLine("║               💖 ¡Recuperaste Salud! 💖              ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║   Recuperaste fuerzas, patito valiente. 🐤        ║");
+                            Console.WriteLine("║   ¡Tu energía vuelve como un río mágico! 💧✨      ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║              ❤️ +10 Salud ❤️                     ║");
+                            Console.WriteLine("╚══════════════════════════════════════════════════╝");
                             patoVida=Math.Min(patoVida+10,70);
                             CleanPantalla();
                         }
                         else if (patoPersonaje==3)
                         {
-                            Console.WriteLine("Recuperaste salud ¡YAY!");
+                            Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                            Console.WriteLine("║               💖 ¡Recuperaste Salud! 💖              ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║   Recuperaste fuerzas, patito valiente. 🐤        ║");
+                            Console.WriteLine("║   ¡Tu energía vuelve como un río mágico! 💧✨      ║");
+                            Console.WriteLine("║                                                  ║");
+                            Console.WriteLine("║              ❤️ +10 Salud ❤️                     ║");
+                            Console.WriteLine("╚══════════════════════════════════════════════════╝");
                             patoVida=Math.Min(patoVida+10,85);
                             CleanPantalla();
                         }
                         break;
                     case 2:
-                        Console.WriteLine("Parece que te has hecho más fuerte...\nAtq +7");
+                        Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                        Console.WriteLine("║               💥 ¡Te has fortalecido! 💥             ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║   Sientes el poder fluir por tus alas. 🐤🔥         ║");
+                        Console.WriteLine("║   ¡Estás listo para enfrentar cualquier reto! ⚔️   ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║               🗡️ Ataque +7 🗡️                      ║");
+                        Console.WriteLine("╚══════════════════════════════════════════════════╝");
                         patoAtaque+=7;
                         CleanPantalla();
                         break;
                     case 3:
-                        Console.WriteLine("Parece que fuiste envenenado... mas suerte a la próxima patito\nSalud -5");
+                       Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                        Console.WriteLine("║              ☠️ ¡Has sido envenenado! ☠️             ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║   Parece que fuiste envenenado...                ║");
+                        Console.WriteLine("║   Más suerte a la próxima, patito. 🐤             ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║              💔 Salud -5 💔                       ║");
+                        Console.WriteLine("╚══════════════════════════════════════════════════╝");
                         patoVida-=5;
                         CleanPantalla();
                         break;
                     default:
-                        Console.WriteLine("¡Oops! parece que esta vez encontramos un cofre sin nada :c");
+                        Console.WriteLine("╔══════════════════════════════════════════════════╗");
+                        Console.WriteLine("║            📦 ¡El cofre estaba vacío! 📦             ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║   ¡Oops! Esta vez no hubo suerte, patito. 😢       ║");
+                        Console.WriteLine("║                                                  ║");
+                        Console.WriteLine("║              📭 Cofre sin contenido               ║");
+                        Console.WriteLine("╚══════════════════════════════════════════════════╝");
+
                         CleanPantalla();
                         break;
                 }
@@ -440,7 +533,13 @@ class proyecto1A
                             }
                             break;
                         default:
-                            Console.WriteLine("GAME OVER patito");
+                            Console.Clear();
+                            Console.WriteLine("╔═══════════════════════════════════╗");
+                            Console.WriteLine("║     ☠️  GAME OVER PATITO ☠️         ║");
+                            Console.WriteLine("╠═══════════════════════════════════╣");
+                            Console.WriteLine("║  Hoy no es tu día patito,         ║");
+                            Console.WriteLine("║  pero ¡volverás más fuerte!       ║");
+                            Console.WriteLine("╚═══════════════════════════════════╝");
                             Environment.Exit(0);
                             break;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                     }
@@ -477,7 +576,13 @@ class proyecto1A
                             }
                             break;
                         default:
-                            Console.WriteLine("GAME OVER patito");
+                            Console.Clear();
+                            Console.WriteLine("╔═══════════════════════════════════╗");
+                            Console.WriteLine("║     ☠️  GAME OVER PATITO ☠️         ║");
+                            Console.WriteLine("╠═══════════════════════════════════╣");
+                            Console.WriteLine("║  Hoy no es tu día patito,         ║");
+                            Console.WriteLine("║  pero ¡volverás más fuerte!       ║");
+                            Console.WriteLine("╚═══════════════════════════════════╝");
                             Environment.Exit(0);
                             break;
                     }
@@ -513,7 +618,13 @@ class proyecto1A
                             }
                             break;
                         default:
-                            Console.WriteLine("GAME OVER patito");
+                            Console.Clear();
+                            Console.WriteLine("╔═══════════════════════════════════╗");
+                            Console.WriteLine("║     ☠️  GAME OVER PATITO ☠️         ║");
+                            Console.WriteLine("╠═══════════════════════════════════╣");
+                            Console.WriteLine("║  Hoy no es tu día patito,         ║");
+                            Console.WriteLine("║  pero ¡volverás más fuerte!       ║");
+                            Console.WriteLine("╚═══════════════════════════════════╝");
                             Environment.Exit(0);
                             break;
                     }
@@ -553,7 +664,13 @@ class proyecto1A
                             CleanPantalla();
                             break;
                         default:
-                            Console.WriteLine("GAME OVER patito");
+                            Console.Clear();
+                            Console.WriteLine("╔═══════════════════════════════════╗");
+                            Console.WriteLine("║     ☠️  GAME OVER PATITO ☠️         ║");
+                            Console.WriteLine("╠═══════════════════════════════════╣");
+                            Console.WriteLine("║  Hoy no es tu día patito,         ║");
+                            Console.WriteLine("║  pero ¡volverás más fuerte!       ║");
+                            Console.WriteLine("╚═══════════════════════════════════╝");
                             Environment.Exit(0);
                             break;
                     }
@@ -590,7 +707,13 @@ class proyecto1A
                             CleanPantalla();
                             break;
                         default:
-                            Console.WriteLine("GAME OVER patito");
+                            Console.Clear();
+                            Console.WriteLine("╔═══════════════════════════════════╗");
+                            Console.WriteLine("║     ☠️  GAME OVER PATITO ☠️         ║");
+                            Console.WriteLine("╠═══════════════════════════════════╣");
+                            Console.WriteLine("║  Hoy no es tu día patito,         ║");
+                            Console.WriteLine("║  pero ¡volverás más fuerte!       ║");
+                            Console.WriteLine("╚═══════════════════════════════════╝");
                             Environment.Exit(0);
                             break;
                     }
@@ -626,7 +749,13 @@ class proyecto1A
                             CleanPantalla();
                             break;
                         default:
-                            Console.WriteLine("GAME OVER patito");
+                            Console.Clear();
+                            Console.WriteLine("╔═══════════════════════════════════╗");
+                            Console.WriteLine("║     ☠️  GAME OVER PATITO ☠️         ║");
+                            Console.WriteLine("╠═══════════════════════════════════╣");
+                            Console.WriteLine("║  Hoy no es tu día patito,         ║");
+                            Console.WriteLine("║  pero ¡volverás más fuerte!       ║");
+                            Console.WriteLine("╚═══════════════════════════════════╝");
                             Environment.Exit(0);
                             break;
                     }

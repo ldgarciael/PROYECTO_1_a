@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\LUFU\\.nuget\\packages\\": {}
+    "C:\\Users\\chris\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LUFU\\Documents\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\PROYECTO_1_a.csproj",
+      "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\PROYECTO_1_a.csproj",
       "projectName": "PROYECTO_1_a",
-      "projectPath": "C:\\Users\\LUFU\\Documents\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\PROYECTO_1_a.csproj",
-      "packagesPath": "C:\\Users\\LUFU\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LUFU\\Documents\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\obj\\",
+      "projectPath": "C:\\Users\\chris\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\PROYECTO_1_a.csproj",
+      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chris\\OneDrive\\Proyecto_1_A\\PROYECTO_1_a\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LUFU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -44,7 +44,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
