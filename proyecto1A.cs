@@ -2,7 +2,7 @@
 using System.Collections;
 class proyecto1A
 {
-    static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0, patoCofre, patoPersonaje, i=1,patoCantidadEnemigos, patoVidaEnemigos, BMJ, ataque;
+    static  int patoVida, patoAtaque, patoEnemigosDerrotados = 0, patoCofre, patoPersonaje, i=1,patoCantidadEnemigos, patoVidaEnemigos, BMJ, ataque, patoTurno;
     static bool patoAvanzar;
     static string patoMapaNombre = "",patoNombre = "";
     public static void Main()
@@ -31,7 +31,6 @@ class proyecto1A
         ManejoDeCofres();
         i=3;
         PatoPelea1();
-
     }
     static void EleccionDePersonaje()
     {
@@ -392,109 +391,206 @@ class proyecto1A
     }
     static void PatoPelea1()
     {
-        if (i==1)
+        if (patoMapaNombre=="CUEVA SOMBRÍA")
         {
-            BMJ = CantidadEnemigos(patoCantidadEnemigos);
-            patoVidaEnemigos=20;
-            patoVidaEnemigos*=BMJ;
-            Console.WriteLine("Parece que han aparecido "+ BMJ +" bandidos");
-            Console.WriteLine("A continuación se llevará una intensa batalla");
-            while(patoVidaEnemigos>0)
+            if (i==1)
             {
-                Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
-                int.TryParse(Console.ReadLine(), out int patoTurno);
-                switch (patoTurno)
+                BMJ = CantidadEnemigos(patoCantidadEnemigos);
+                patoVidaEnemigos=20;
+                patoVidaEnemigos*=BMJ;
+                Console.WriteLine("Parece que han aparecido "+ BMJ +" bandidos");
+                Console.WriteLine("A continuación se llevará una intensa batalla\nen este mapa los enemigos atacan primero, asi que ¡¡¡ten cuidado paito!!!");
+                while (patoVidaEnemigos>0)
                 {
-                    case 1:
-                        patoVidaEnemigos-=patoAtaque;
-                        Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
-                        if (patoVidaEnemigos<=0)
-                        {
-                            Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
-                            patoEnemigosDerrotados+=BMJ;
-                            MenuPrincipal();
-                            break;
-                        }
-                        ataque = PoderEnemigos(patoCantidadEnemigos);
-                        patoVida-=ataque;
-                        Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
-                        FinDelJuego();
+                    ataque = PoderEnemigos(patoCantidadEnemigos);
+                    patoVida-=ataque;
+                    Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                    FinDelJuego();
+                    patoVidaEnemigos-=patoAtaque;
+                    Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                    if (patoVidaEnemigos<=0)
+                    {
+                        Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                        patoEnemigosDerrotados+=BMJ;
                         CleanPantalla();
+                        MenuPrincipal();
                         break;
-                    default:
-                        Console.WriteLine("GAME OVER patito");
-                        Environment.Exit(0);
-                        break;
+                    }
                 }
             }
-        }
-        else if (i==2)
-        {
-            BMJ = CantidadEnemigos(patoCantidadEnemigos);
-            patoVidaEnemigos=25;
-            patoVidaEnemigos*=BMJ;
-            Console.WriteLine("Parece que han aparecido "+ BMJ +" monstruos");
-            Console.WriteLine("A continuación se llevará una intensa batalla");
-            while(patoVidaEnemigos>0)
+            else if (i==2)
             {
-                Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
-                int.TryParse(Console.ReadLine(), out int patoTurno);
-                switch (patoTurno)
+                BMJ = CantidadEnemigos(patoCantidadEnemigos);
+                patoVidaEnemigos=25;
+                patoVidaEnemigos*=BMJ;
+                Console.WriteLine("Parece que han aparecido "+ BMJ +" monstruos");
+                Console.WriteLine("A continuación se llevará una intensa batalla\nen este mapa los enemigos atacan primero, asi que ¡¡¡ten cuidado paito!!!");
+                while (patoVidaEnemigos>0)
                 {
-                    case 1:
-                        patoVidaEnemigos-=patoAtaque;
-                        Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
-                        if (patoVidaEnemigos<=0)
-                        {
-                            Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
-                            patoEnemigosDerrotados+=BMJ;
-                            MenuPrincipal();
-                            break;
-                        }
-                        ataque = PoderEnemigos(patoCantidadEnemigos);
-                        patoVida-=ataque;
-                        Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
-                        FinDelJuego();
+                    ataque = PoderEnemigos(patoCantidadEnemigos);
+                    patoVida-=ataque;
+                    Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                    FinDelJuego();
+                    patoVidaEnemigos-=patoAtaque;
+                    Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                    if (patoVidaEnemigos<=0)
+                    {
+                        Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                        patoEnemigosDerrotados+=BMJ;
                         CleanPantalla();
+                        MenuPrincipal();
                         break;
-                    default:
-                        Console.WriteLine("GAME OVER patito");
-                        Environment.Exit(0);
-                        break;
+                    }
                 }
             }
-        }
+            else 
+            {
+                patoVidaEnemigos=70;
+                Console.WriteLine("Parece que ha aparecido el Jefe final ¡¡Ten cuidado patito!!");
+                Console.WriteLine("A continuación se llevará una intensa batalla\nen este mapa los enemigos atacan primero, asi que ¡¡¡ten cuidado paito!!!");
+                while (patoVidaEnemigos>0)
+                {
+                    Console.WriteLine("A pelear patito");
+                    int.TryParse(Console.ReadLine(), out patoTurno);
+                    ataque = PoderEnemigos(patoCantidadEnemigos);
+                    patoVida-=ataque;
+                    Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                    FinDelJuego();
+                    Console.WriteLine("Ahora es tu turno\n(1) atacar\t(2) huir");
+                    int.TryParse(Console.ReadLine(), out patoTurno);
+                    switch (patoTurno)
+                    {
+                        case 1:
+                            patoVidaEnemigos-=patoAtaque;
+                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            if (patoVidaEnemigos<=0)
+                            {
+                                Console.WriteLine($"Bien hecho {patoNombre}, venciste al jefe final, ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!!");
+                                patoEnemigosDerrotados+=BMJ;
+                                CleanPantalla();
+                                MenuPrincipal();
+                                Console.WriteLine("Esta cruzada llega a su fin ¡¡¡pero nunca sera el final de la historia de este legendario pato!!!");
+                                break;
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("GAME OVER patito");
+                            Environment.Exit(0);
+                            break;
+                    }
+                }
+            }
+        } 
         else
         {
-            patoVidaEnemigos=70;
-             Console.WriteLine("Parece que ha aparecido el jefe final ¡¡Ten cuidado patito!!");
-            Console.WriteLine("A continuación se llevará una intensa batalla");
-            while(patoVidaEnemigos>0)
+            if (i==1)
             {
-                Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
-                int.TryParse(Console.ReadLine(), out int patoTurno);
-                switch (patoTurno)
+                BMJ = CantidadEnemigos(patoCantidadEnemigos);
+                patoVidaEnemigos=20;
+                patoVidaEnemigos*=BMJ;
+                Console.WriteLine("Parece que han aparecido "+ BMJ +" bandidos");
+                Console.WriteLine("A continuación se llevará una intensa batalla");
+                while(patoVidaEnemigos>0)
                 {
-                    case 1:
-                        patoVidaEnemigos-=patoAtaque;
-                        Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
-                        if (patoVidaEnemigos<=0)
-                        {
-                            Console.WriteLine($"Bien hecho {patoNombre}, venciste al jefe final, ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!!");
-                            patoEnemigosDerrotados+=BMJ;
-                            MenuPrincipal();
+                    Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
+                    int.TryParse(Console.ReadLine(), out patoTurno);
+                    switch (patoTurno)
+                    {
+                        case 1:
+                            patoVidaEnemigos-=patoAtaque;
+                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            if (patoVidaEnemigos<=0)
+                            {
+                                Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                                patoEnemigosDerrotados+=BMJ;
+                                CleanPantalla();
+                                MenuPrincipal();
+                                break;
+                            }
+                            ataque = PoderEnemigos(patoCantidadEnemigos);
+                            patoVida-=ataque;
+                            Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                            FinDelJuego();
+                            CleanPantalla();
                             break;
-                        }
-                        ataque = PoderEnemigos(patoCantidadEnemigos);
-                        patoVida-=ataque;
-                        Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
-                        FinDelJuego();
-                        CleanPantalla();
-                        break;
-                    default:
-                        Console.WriteLine("GAME OVER patito");
-                        Environment.Exit(0);
-                        break;
+                        default:
+                            Console.WriteLine("GAME OVER patito");
+                            Environment.Exit(0);
+                            break;
+                    }
+                }
+            }
+            else if (i==2)
+            {
+                BMJ = CantidadEnemigos(patoCantidadEnemigos);
+                patoVidaEnemigos=25;
+                patoVidaEnemigos*=BMJ;
+                Console.WriteLine("Parece que han aparecido "+ BMJ +" monstruos");
+                Console.WriteLine("A continuación se llevará una intensa batalla");
+                while(patoVidaEnemigos>0)
+                {
+                    Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
+                    int.TryParse(Console.ReadLine(), out patoTurno);
+                    switch (patoTurno)
+                    {
+                        case 1:
+                            patoVidaEnemigos-=patoAtaque;
+                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            if (patoVidaEnemigos<=0)
+                            {
+                                Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                                patoEnemigosDerrotados+=BMJ;
+                                CleanPantalla();
+                                MenuPrincipal();
+                                break;
+                            }
+                            ataque = PoderEnemigos(patoCantidadEnemigos);
+                            patoVida-=ataque;
+                            Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                            FinDelJuego();
+                            CleanPantalla();
+                            break;
+                        default:
+                            Console.WriteLine("GAME OVER patito");
+                            Environment.Exit(0);
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                patoVidaEnemigos=70;
+                Console.WriteLine("Parece que ha aparecido el jefe final ¡¡Ten cuidado patito!!");
+                Console.WriteLine("A continuación se llevará una intensa batalla");
+                while(patoVidaEnemigos>0)
+                {
+                    Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
+                    int.TryParse(Console.ReadLine(), out patoTurno);
+                    switch (patoTurno)
+                    {
+                        case 1:
+                            patoVidaEnemigos-=patoAtaque;
+                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            if (patoVidaEnemigos<=0)
+                            {
+                                Console.WriteLine($"Bien hecho {patoNombre}, venciste al jefe final, ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!!");
+                                patoEnemigosDerrotados+=BMJ;
+                                CleanPantalla();
+                                MenuPrincipal();
+                                Console.WriteLine("Esta cruzada llega a su fin ¡¡¡pero nunca sera el final de la historia de este legendario pato!!!");
+                                break;
+                            }
+                            ataque = PoderEnemigos(patoCantidadEnemigos);
+                            patoVida-=ataque;
+                            Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                            FinDelJuego();
+                            CleanPantalla();
+                            break;
+                        default:
+                            Console.WriteLine("GAME OVER patito");
+                            Environment.Exit(0);
+                            break;
+                    }
                 }
             }
         }
