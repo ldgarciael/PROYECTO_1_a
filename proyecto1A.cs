@@ -19,13 +19,23 @@ class proyecto1A
         MenuPrincipal();
         ManejoDeCofresMapas();
         PatoPelea1();
-        Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
+        Console.WriteLine("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+        Console.WriteLine("┃  🎁 Encontraste un ¡Tesoro Misterioso! 🎁 ┃");
+        Console.WriteLine("┃  🦆🗿 ESTATUAS ANCESTRALES DE PIEDRA 🗿🦆  ┃");
+        Console.WriteLine("┃  ¡Un cofre protegido por antiguos guardianes! ┃");
+        Console.WriteLine("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+        Console.WriteLine("Parece que has encontrado un cofre misterioso\n¿deseas abrirlo?");
         Console.WriteLine("(1) Si\t(2) No");
         int.TryParse(Console.ReadLine(), out patoCofre);
         ManejoDeCofres();
         i=2;
         PatoPelea1();
-        Console.WriteLine("¡En hora buena! parece que has conseguido un cofre ¿deseas abrirlo?");
+        Console.WriteLine("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+        Console.WriteLine("┃  🎁 Encontraste un ¡Tesoro Misterioso! 🎁 ┃");
+        Console.WriteLine("┃  🦆🗿 ESTATUAS ANCESTRALES DE PIEDRA 🗿🦆  ┃");
+        Console.WriteLine("┃  ¡Un cofre protegido por antiguos guardianes! ┃");
+        Console.WriteLine("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+        Console.WriteLine("Parece que has encontrado un cofre misterioso\n¿deseas abrirlo?");
         Console.WriteLine("(1) Si\t(2) No");
         int.TryParse(Console.ReadLine(), out patoCofre);
         ManejoDeCofres();
@@ -545,7 +555,14 @@ class proyecto1A
                             Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             if (patoVidaEnemigos<=0)
                             {
-                                Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                                Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                                Console.WriteLine($"║🏆  ¡Bien hecho, {patoNombre}!                      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║   Venciste a todos los enemigos con valentía. 💪   ║");
+                                Console.WriteLine("║   Sigamos avanzando en nuestra aventura. 🗺️✨      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║      ¡Eres un verdadero Pato héroe! 🐤👑       ║");
+                                Console.WriteLine("╚════════════════════════════════════════════════════╝");
                                 patoEnemigosDerrotados+=BMJ;
                                 CleanPantalla();
                                 MenuPrincipal();
@@ -583,18 +600,41 @@ class proyecto1A
                     Console.WriteLine("A pelear patito");
                     ataque = PoderEnemigos(patoCantidadEnemigos);
                     patoVida-=ataque;
-                    Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                    Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                    Console.WriteLine($"║💢  ¡{patoNombre} ha recibido un ataque enemigo!    ║");
+                    Console.WriteLine("║                                                    ║");
+                    Console.WriteLine($"║   Ha perdido {ataque} puntos de vida... ¡auch! 🩸           ║");
+                    Console.WriteLine("║                                                    ║");
+                    Console.WriteLine("║        ¡Resiste, patito! Aún puedes pelear 🐤💪     ║");
+                    Console.WriteLine("╚════════════════════════════════════════════════════╝");
                     FinDelJuego();
+                    Console.WriteLine("╔═══════════════════════════════════╗");
+                    Console.WriteLine("    ⚠️ ¡ENEMIGO ACECHA! ⚠️    ");
+                    Console.WriteLine("    ¡Defiende tu honor!    ");
+                    Console.WriteLine("╚═══════════════════════════════════╝");
                     Console.WriteLine("Ahora es tu turno\n(1) atacar\t(2) huir");
                     int.TryParse(Console.ReadLine(), out patoTurno);
                     switch (patoTurno)
                     {
                         case 1:
                             patoVidaEnemigos-=patoAtaque;
-                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                            Console.WriteLine($"║💥  {patoNombre} ha atacado al enemigo feroz        ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine($"║   ¡El enemigo ha perdido {patoAtaque} puntos de vida! 💢   ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine("║        ¡Buen golpe, patito guerrero! 🐤⚔️          ║");
+                            Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             if (patoVidaEnemigos<=0)
                             {
-                                Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                                Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                                Console.WriteLine($"║🏆  ¡Bien hecho, {patoNombre}!                      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║   Venciste a todos los enemigos con valentía. 💪   ║");
+                                Console.WriteLine("║   Sigamos avanzando en nuestra aventura. 🗺️✨      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║      ¡Eres un verdadero Pato héroe! 🐤👑       ║");
+                                Console.WriteLine("╚════════════════════════════════════════════════════╝");
                                 patoEnemigosDerrotados+=BMJ;
                                 CleanPantalla();
                                 MenuPrincipal();
@@ -630,18 +670,41 @@ class proyecto1A
                     Console.WriteLine("A pelear patito");
                     ataque = PoderEnemigos(patoCantidadEnemigos);
                     patoVida-=ataque;
-                    Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                    Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                    Console.WriteLine($"║💢  ¡{patoNombre} ha recibido un ataque enemigo!    ║");
+                    Console.WriteLine("║                                                    ║");
+                    Console.WriteLine($"║   Ha perdido {ataque} puntos de vida... ¡auch! 🩸           ║");
+                    Console.WriteLine("║                                                    ║");
+                    Console.WriteLine("║        ¡Resiste, patito! Aún puedes pelear 🐤💪     ║");
+                    Console.WriteLine("╚════════════════════════════════════════════════════╝");
                     FinDelJuego();
+                    Console.WriteLine("╔═══════════════════════════════════╗");
+                    Console.WriteLine("    ⚠️ ¡ENEMIGO ACECHA! ⚠️    ");
+                    Console.WriteLine("    ¡Defiende tu honor!    ");
+                    Console.WriteLine("╚═══════════════════════════════════╝");
                     Console.WriteLine("Ahora es tu turno\n(1) atacar\t(2) huir");
                     int.TryParse(Console.ReadLine(), out patoTurno);
                     switch (patoTurno)
                     {
                         case 1:
                             patoVidaEnemigos-=patoAtaque;
-                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                            Console.WriteLine($"║💥  {patoNombre} ha atacado al enemigo feroz        ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine($"║   ¡El enemigo ha perdido {patoAtaque} puntos de vida! 💢   ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine("║        ¡Buen golpe, patito guerrero! 🐤⚔️          ║");
+                            Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             if (patoVidaEnemigos<=0)
                             {
-                                Console.WriteLine($"Bien hecho {patoNombre}, venciste al jefe final, ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!!");
+                                Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                                Console.WriteLine($"║🎉  ¡Bien hecho, {patoNombre}!                      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║   ¡Has vencido al Jefe Final en una batalla épica! ║");
+                                Console.WriteLine("║   ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!! 🦆🔥       ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║     ¡Patito chiquito, corazón gigante! 💛🐤       ║");
+                                Console.WriteLine("╚════════════════════════════════════════════════════╝");
                                 patoEnemigosDerrotados+=BMJ;
                                 CleanPantalla();
                                 MenuPrincipal();
@@ -680,16 +743,33 @@ class proyecto1A
                 Console.WriteLine("╚════════════════════════════════════════════════════╝");
                 while(patoVidaEnemigos>0)
                 {
+                    Console.WriteLine("╔═══════════════════════════════════╗");
+                    Console.WriteLine("    ⚠️ ¡ENEMIGO ACECHA! ⚠️    ");
+                    Console.WriteLine("    ¡Defiende tu honor!    ");
+                    Console.WriteLine("╚═══════════════════════════════════╝");
                     Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
                     int.TryParse(Console.ReadLine(), out patoTurno);
                     switch (patoTurno)
                     {
                         case 1:
                             patoVidaEnemigos-=patoAtaque;
-                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                            Console.WriteLine($"║💥  {patoNombre} ha atacado al enemigo feroz        ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine($"║   ¡El enemigo ha perdido {patoAtaque} puntos de vida! 💢   ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine("║        ¡Buen golpe, patito guerrero! 🐤⚔️          ║");
+                            Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             if (patoVidaEnemigos<=0)
                             {
-                                Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                                Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                                Console.WriteLine($"║🏆  ¡Bien hecho, {patoNombre}!                      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║   Venciste a todos los enemigos con valentía. 💪   ║");
+                                Console.WriteLine("║   Sigamos avanzando en nuestra aventura. 🗺️✨      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║      ¡Eres un verdadero Pato héroe! 🐤👑       ║");
+                                Console.WriteLine("╚════════════════════════════════════════════════════╝");
                                 patoEnemigosDerrotados+=BMJ;
                                 CleanPantalla();
                                 MenuPrincipal();
@@ -697,7 +777,13 @@ class proyecto1A
                             }
                             ataque = PoderEnemigos(patoCantidadEnemigos);
                             patoVida-=ataque;
-                            Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                            Console.WriteLine($"║💢  ¡{patoNombre} ha recibido un ataque enemigo!    ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine($"║   Ha perdido {ataque} puntos de vida... ¡auch! 🩸           ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine("║        ¡Resiste, patito! Aún puedes pelear 🐤💪     ║");
+                            Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             FinDelJuego();
                             CleanPantalla();
                             break;
@@ -729,16 +815,33 @@ class proyecto1A
                 Console.WriteLine("╚════════════════════════════════════════════════════╝");
                 while(patoVidaEnemigos>0)
                 {
+                    Console.WriteLine("╔═══════════════════════════════════╗");
+                    Console.WriteLine("         ⚠️ ¡ENEMIGO ACECHA! ⚠️    ");
+                    Console.WriteLine("         ¡Defiende tu honor!    ");
+                    Console.WriteLine("╚═══════════════════════════════════╝");
                     Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
                     int.TryParse(Console.ReadLine(), out patoTurno);
                     switch (patoTurno)
                     {
                         case 1:
                             patoVidaEnemigos-=patoAtaque;
-                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                            Console.WriteLine($"║💥  {patoNombre} ha atacado al enemigo feroz        ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine($"║   ¡El enemigo ha perdido {patoAtaque} puntos de vida! 💢   ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine("║        ¡Buen golpe, patito guerrero! 🐤⚔️          ║");
+                            Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             if (patoVidaEnemigos<=0)
                             {
-                                Console.WriteLine($"Bien hecho {patoNombre}, venciste a todos los enemigos. Siguamos avanzando en nuestra aventura");
+                                Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                                Console.WriteLine($"║🎉  ¡Bien hecho, {patoNombre}!                      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║   ¡Has vencido al Jefe Final en una batalla épica! ║");
+                                Console.WriteLine("║   ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!! 🦆🔥       ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║     ¡Patito chiquito, corazón gigante! 💛🐤       ║");
+                                Console.WriteLine("╚════════════════════════════════════════════════════╝");
                                 patoEnemigosDerrotados+=BMJ;
                                 CleanPantalla();
                                 MenuPrincipal();
@@ -746,7 +849,13 @@ class proyecto1A
                             }
                             ataque = PoderEnemigos(patoCantidadEnemigos);
                             patoVida-=ataque;
-                            Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                            Console.WriteLine($"║💢  ¡{patoNombre} ha recibido un ataque enemigo!    ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine($"║   Ha perdido {ataque} puntos de vida... ¡auch! 🩸           ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine("║        ¡Resiste, patito! Aún puedes pelear 🐤💪     ║");
+                            Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             FinDelJuego();
                             CleanPantalla();
                             break;
@@ -766,20 +875,43 @@ class proyecto1A
             else
             {
                 patoVidaEnemigos=70;
-                Console.WriteLine("Parece que ha aparecido el jefe final ¡¡Ten cuidado patito!!");
-                Console.WriteLine("A continuación se llevará una intensa batalla");
+                Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                Console.WriteLine("║       ⚔️  Parece que ha aparecido el Jefe final    ║");
+                Console.WriteLine("║        ¡¡Ten cuidado patito!!                       ║");
+                Console.WriteLine("║                                                    ║");
+                Console.WriteLine("║¡Cuidado! En este mapa los enemigos atacan primero║");
+                Console.WriteLine("║   ¡Mantente firme, patito valiente! 🐤🛡️           ║");
+                Console.WriteLine("║                                                    ║");
+                Console.WriteLine("╚════════════════════════════════════════════════════╝");
                 while(patoVidaEnemigos>0)
                 {
+                    Console.WriteLine("╔═══════════════════════════════════╗");
+                    Console.WriteLine("         ⚠️ ¡ENEMIGO ACECHA! ⚠️    ");
+                    Console.WriteLine("         ¡Defiende tu honor!    ");
+                    Console.WriteLine("╚═══════════════════════════════════╝");
                     Console.WriteLine("¡¡Venga ataca patito!!\n(1) atacar\t(2) huír");
                     int.TryParse(Console.ReadLine(), out patoTurno);
                     switch (patoTurno)
                     {
                         case 1:
                             patoVidaEnemigos-=patoAtaque;
-                            Console.WriteLine($"{patoNombre} ha atacado al enemigo, vida del enemigo -{patoAtaque}");
+                            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                            Console.WriteLine($"║💥  {patoNombre} ha atacado al enemigo feroz        ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine($"║   ¡El enemigo ha perdido {patoAtaque} puntos de vida! 💢   ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine("║        ¡Buen golpe, patito guerrero! 🐤⚔️          ║");
+                            Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             if (patoVidaEnemigos<=0)
                             {
-                                Console.WriteLine($"Bien hecho {patoNombre}, venciste al jefe final, ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!!");
+                                Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                                Console.WriteLine($"║🎉  ¡Bien hecho, {patoNombre}!                      ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║   ¡Has vencido al Jefe Final en una batalla épica! ║");
+                                Console.WriteLine("║   ¡¡ARRIBA LA SUPREMACÍA DE LOS PATOS!! 🦆🔥       ║");
+                                Console.WriteLine("║                                                    ║");
+                                Console.WriteLine("║     ¡Patito chiquito, corazón gigante! 💛🐤       ║");
+                                Console.WriteLine("╚════════════════════════════════════════════════════╝");
                                 patoEnemigosDerrotados+=BMJ;
                                 CleanPantalla();
                                 MenuPrincipal();
@@ -788,7 +920,13 @@ class proyecto1A
                             }
                             ataque = PoderEnemigos(patoCantidadEnemigos);
                             patoVida-=ataque;
-                            Console.WriteLine($"{patoNombre} ha recibido un ataque de parte del enemigo, vida -{ataque}");
+                            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+                            Console.WriteLine($"║💢  ¡{patoNombre} ha recibido un ataque enemigo!    ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine($"║   Ha perdido {ataque} puntos de vida... ¡auch! 🩸           ║");
+                            Console.WriteLine("║                                                    ║");
+                            Console.WriteLine("║        ¡Resiste, patito! Aún puedes pelear 🐤💪     ║");
+                            Console.WriteLine("╚════════════════════════════════════════════════════╝");
                             FinDelJuego();
                             CleanPantalla();
                             break;
